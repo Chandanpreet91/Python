@@ -20,15 +20,11 @@ operations = {
 }
 
 num1 = int(input("Enter a first number: "))
-num2 = int(input("Enter a second number: "))
 
 for operator in operations:
   print(operator)
 operation_symbol = input("Pick an operation from line above: ")
-
-for symbol in operations:
-  if operation_symbol == symbol:
-    print(symbol)
-    answer = operations[symbol](num1,num2)
+num2 = int(input("Enter a second number: "))
+answer = operations[operation_symbol](num1,num2)
 
 print(f"{num1} {operation_symbol} {num2} = {answer}")
